@@ -15,14 +15,14 @@ class College(BaseModel):
 
 class Program(BaseModel):
     prog_name = models.CharField(max_length=150)
-    College = models.ForeignKey(College, on_delete=models.CASCADE)
+    college = models.ForeignKey(College, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.prog_name
 
 class Organization(BaseModel):
     name = models.CharField(max_length=250)
-    College = models.ForeignKey(
+    college = models.ForeignKey(
         College, null=True, blank=True, on_delete=models.CASCADE)
     description = models.CharField(max_length=500)
 
