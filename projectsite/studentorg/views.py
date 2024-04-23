@@ -18,7 +18,7 @@ class HomePageView(ListView):
     context_object_name = 'home'
     template_name = "home.html"
 
-# Create your views here.
+
 class OrganizationList(ListView):
     model = Organization
     context_object_name = 'organization'
